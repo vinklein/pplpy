@@ -6,7 +6,7 @@ notifications:
 
 matrix:
   include:
-    #Tests on osx are working but are slow. Uncomment to run them.
+    # Tests on osx are working but are slow. Uncomment to run them.
     - language: generic
       os: osx
       before_install: # command to install dependencies
