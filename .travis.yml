@@ -60,7 +60,7 @@ matrix:
 
 install: # command to install dependencies
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then source env/bin/activate; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install mpfr; fi
+  # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install mpfr; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install libmpc; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ppl; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update; fi
