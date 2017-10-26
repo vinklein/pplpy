@@ -63,13 +63,12 @@ install: # command to install dependencies
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install mpfr; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install libmpc; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ppl; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install cython; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libgmp-dev; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libmpfr-dev; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libmpc-dev; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libppl-dev; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install cython; fi
+  - pip install Cython --user
   - pip install git+https://github.com/aleaxit/gmpy --no-index --verbose --user;
   - pip install cysignals --user;
   - pip install . --verbose --no-index --user;
