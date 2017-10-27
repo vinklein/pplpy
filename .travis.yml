@@ -64,15 +64,18 @@ install: # command to install dependencies
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install libmpc; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ppl; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install Cython; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install git+https://github.com/aleaxit/gmpy --no-index; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install cysignals; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install . --no-index; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libgmp-dev; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libmpfr-dev; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libmpc-dev; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install libppl-dev; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then pip install Cython --user; fi
-  - pip install git+https://github.com/aleaxit/gmpy --no-index --verbose --user;
-  - pip install cysignals --user;
-  - pip install . --verbose --no-index --user;
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then pip install git+https://github.com/aleaxit/gmpy --no-index --user; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then pip install cysignals --user; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then pip install . --verbose --no-index --user; fi
 # command to run tests
 script:
   - cd tests
