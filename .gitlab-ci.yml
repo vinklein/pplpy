@@ -14,7 +14,8 @@ build:
 test:
   stage: test
   script:
-  - cd testsddd
+  - echo Y | apt-get install python
+  - cd tests
   - python rundoctest.py
   - python setup.py build_ext --inplace
   - python -c "import testpplpy"
