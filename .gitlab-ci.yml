@@ -4,6 +4,7 @@ build:
   stage: build
   script:
   - apt-get -qq update
+  - echo Y | apt-get install software-properties-common python-software-properties
   - add-apt-repository universe
   - echo Y | apt-get install python
   - echo Y | apt-get install apt-utils python-pip git
