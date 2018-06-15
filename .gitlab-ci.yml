@@ -2,7 +2,7 @@ build:
   image: ubuntu:18.04
   stage: build
   script:
-  - apt-get -qq update
+  - RUN apt-get -qq update && apt-get install -y --no-install-recommends apt-utils
   - yes Y | apt-get install nodejs
   - pip install Cython --verbose --disable-pip-version-check
   - pip install gmpy2==2.1.0a1 --verbose --disable-pip-version-check --no-binary ":all:"
