@@ -14,7 +14,7 @@ build:
 test:
   stage: test
   script:
-  - echo Y | apt-get install python
+  - echo Y | apt-get install python3
   - cd tests
   - python rundoctest.py
   - python setup.py build_ext --inplace
