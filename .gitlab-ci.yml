@@ -1,5 +1,6 @@
+image: ubuntu:18.04
+
 build:
-  image: ubuntu:18.04
   stage: build
   script:
   - apt-get -qq update
