@@ -3,7 +3,7 @@ build:
   stage: build
   script:
   - apt-get -qq update
-  - yes Y | apt-get install apt-utils
+  - echo Y | apt-get install apt-utils
   - yes Y | apt-get install -V npm
   - ls
 
