@@ -4,10 +4,7 @@ build:
   script:
   - RUN apt-get -qq update && apt-get install -y --no-install-recommends apt-utils
   - yes Y | apt-get install nodejs
-  - pip install Cython --verbose --disable-pip-version-check
-  - pip install gmpy2==2.1.0a1 --verbose --disable-pip-version-check --no-binary ":all:"
-  - pip install cysignals --verbose --disable-pip-version-check
-  - pip install . --verbose --no-index
+  - ls
 
 test:
   stage: test
