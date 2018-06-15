@@ -14,7 +14,7 @@ build:
 test:
   stage: test
   script:
-  - cd tests
+  - cd testsddd
   - python rundoctest.py
   - python setup.py build_ext --inplace
   - python -c "import testpplpy"
