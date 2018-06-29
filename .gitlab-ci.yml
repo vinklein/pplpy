@@ -43,3 +43,10 @@ python3.6:
     PYTHON: python3.6
     PKGS: python3.6 python3.6-dev python3-pip
   script: *test_script
+
+python2.7.osx:
+  tags: osx
+  variables:
+    PYTHON: python
+    PKGS: python-pip
+  script: *test_script
